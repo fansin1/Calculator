@@ -43,7 +43,7 @@ class Calculator(
         if (res != null) {
             return res.toString()
         } else {
-            throw CalculatorException("No such operation")
+            throw CalculatorException("Error")
         }
     }
 

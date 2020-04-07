@@ -7,5 +7,5 @@ interface Operation {
     /**
      * @return calculate result of operation
      */
-    fun execute(num1: Long, num2: Long): Long
+    fun execute(num1: Long, num2: Long): Long?
 }
