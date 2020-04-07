@@ -1,7 +1,10 @@
+package org.fansin.calculator
+
 import com.nhaarman.mockitokotlin2.any
 import com.nhaarman.mockitokotlin2.doAnswer
 import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.verify
+import org.fansin.calculator.operation.Operation
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 
@@ -12,9 +15,11 @@ class CalculatorTest {
             invocationOnMock.arguments[0] as Long + invocationOnMock.arguments[1] as Long
         }
     }
-    private val calculator = Calculator(hashMapOf(
-        "+" to plusOperationMock
-    ))
+    private val calculator = Calculator(
+        hashMapOf(
+            "+" to plusOperationMock
+        )
+    )
 
     @Test
     fun testPlus() {

@@ -1,3 +1,7 @@
+package org.fansin.calculator
+
+import org.fansin.calculator.operation.Operation
+
 /**
  * Execute commands for 2 numbers
  */
@@ -44,7 +48,7 @@ class Calculator(
     }
 
     enum class State(private val nextState: String) {
-        Number1("Number2"), Number2("Operation"), Operation("Number1");
+        Number1("Number2"), Number2("org.fansin.calculator.operation.Operation"), Operation("Number1");
 
         fun nextState(): State {
             return valueOf(nextState)
