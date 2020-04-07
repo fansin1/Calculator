@@ -16,7 +16,11 @@ class CalculatorConsole(
      */
     fun start() {
         while (true) {
-            val res = calculator.nextInput(reader.readLine())
+            val res = try {
+                calculator.nextInput(reader.readLine())
+            } catch (e: CalculatorException) {
+                "Error, please try again"
+            }
             if (res != null) {
                 writer.write(res + "\n")
                 writer.flush()
