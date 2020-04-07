@@ -19,7 +19,8 @@ class CalculatorConsole(
         while (true) {
             val res = calculator.nextInput(reader.readLine())
             if (res != null) {
-                writer.write(res)
+                writer.write(res + "\n")
+                writer.flush()
             }
         }
     }
