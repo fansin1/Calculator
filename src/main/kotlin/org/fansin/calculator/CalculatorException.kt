@@ -1,3 +1,5 @@
+package org.fansin.calculator
+
 /**
  * Exception from calculator
  */
