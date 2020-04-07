@@ -1,5 +1,7 @@
+package org.fansin.calculator.operation
+
 /**
- * Calculator operations like +, -, /, *
+ * org.fansin.calculator.Calculator operations like +, -, /, *
  */
 interface Operation {
     /**
