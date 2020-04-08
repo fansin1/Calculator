@@ -12,6 +12,8 @@ fun main () {
         "/" to DivideOperation(),
         "*" to MultiplyOperation()
     )
+    val writer = System.out.writer()
+    CalculatorHelp(writer)
     CalculatorConsole(
         System.`in`.bufferedReader(), System.out.writer(),
         Calculator(operations)
