@@ -9,15 +9,21 @@ import java.io.Writer
 class CalculatorConsole(
     private val reader: BufferedReader,
     private val writer: Writer,
-    private val calculator: Calculator
+    private val calculator: Calculator,
+    private val goodbye: Goodbye
 ) {
     /**
      * Start reading numbers and operation and writing results
      */
     fun start() {
         while (true) {
+            val line = reader.readLine()
+            if (line == goodbye.terminator) {
+                writer.write(goodbye.goodbye)
+                break
+            }
             val res = try {
-                calculator.nextInput(reader.readLine())
+                calculator.nextInput(line)
             } catch (e: CalculatorException) {
                 "Error, please try again"
             }

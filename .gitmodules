@@ -1,0 +1,6 @@
+[submodule "CalculatorHelpSubmodule"]
+	path = CalculatorHelpSubmodule
+	url = https://github.com/fansin1/CalculatorHelpSubmodule
+[submodule "CalculatorGoodbyeSubmodule"]
+	path = CalculatorGoodbyeSubmodule
+	url = https://github.com/fansin1/CalculatorGoodbyeSubmodule
